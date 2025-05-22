@@ -29,6 +29,8 @@ Equity Research Agent is a powerful AI-driven tool designed to help investors an
 - **Professional Report Generation**: Create complete research reports with executive summaries, investment ratings, and target prices
 - **Interactive Report Editing**: Regenerate or fine-tune specific sections of reports as needed
 
+![Equity Research Agent Demo](./demo.gif)
+
 ## 🎯 Roadmap
 
 - [x] Professional equity research report structure
@@ -47,10 +49,12 @@ For the best experience, we recommend the following configuration:
 1. **AI Model**: [Gemini 2.5 Flash Preview (05-20)](https://ai.google.dev/gemini-api/docs/models/gemini-flash)
    - Provides the optimal balance between performance, speed, and cost
    - Supports complex financial analysis and reasoning
+   - [Get API Key](https://aistudio.google.com/app/apikey)
 
 2. **Search Provider**: [Tavily](https://tavily.com/)
    - Search engine optimized for research tasks
    - Delivers high-quality, relevant financial information
+   - [Get API Key](https://app.tavily.com/home)
 
 ## 🛠️ Quick Start
 
