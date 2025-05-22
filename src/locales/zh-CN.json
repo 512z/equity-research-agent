@@ -1,0 +1,321 @@
+{
+  "title": "股票研究助手",
+  "theme": "系统主题",
+  "openSource": "开源代码",
+  "copyright": "{{name}} 团队用 ❤️ 构建",
+  "searchPlaceholder": "请输入关键词",
+  "research": {
+    "common": {
+      "startThinking": "开始思考",
+      "rethinking": "重新思考",
+      "thinkingQuestion": "思考问题...",
+      "writeReportPlan": "撰写报告方案",
+      "rewriteReportPlan": "重写报告方案",
+      "startResearch": "开始研究",
+      "restartResearch": "重新研究",
+      "writeReport": "撰写报告",
+      "continueResearch": "继续研究",
+      "indepthResearch": "进一步研究",
+      "rewriteReport": "重写报告",
+      "sources": "资料来源",
+      "thinking": "思考中...",
+      "research": "研究中...",
+      "writing": "撰写中...",
+      "newResearch": "开始新研究",
+      "addToKnowledgeBase": "添加到知识库",
+      "addToKnowledgeBaseTip": "已添加到知识库",
+      "restudy": "重新研究",
+      "edit": "编辑",
+      "save": "保存",
+      "copy": "复制",
+      "export": "导出",
+      "delete": "删除"
+    },
+    "topic": {
+      "title": "1. 股票选择",
+      "topicLabel": "1.1 输入股票名称或代码",
+      "topicPlaceholder": "输入公司名称或股票代码（例如：苹果或AAPL）..."
+    },
+    "feedback": {
+      "title": "2. 研究计划",
+      "emptyTip": "等待股票选择...",
+      "feedbackLabel": "额外研究要求（可选）",
+      "feedbackPlaceholder": "添加您想重点关注的方面（例如：增长潜力、股息政策、最近财报）...",
+      "questions": "2.1 澄清问题",
+      "reportPlan": "2.2 股票研究计划"
+    },
+    "searchResult": {
+      "title": "3. 数据收集",
+      "emptyTip": "等待研究计划确认...",
+      "suggestionLabel": "研究重点调整（可选）",
+      "suggestionPlaceholder": "建议额外的财务指标或市场因素考量...",
+      "references": "参考文献",
+      "relatedImages": "相关图片"
+    },
+    "finalReport": {
+      "title": "4. 股票研究报告",
+      "emptyTip": "等待财务数据分析...",
+      "researchedInfor": "已分析 {{total}} 个金融信息源",
+      "localResearchedInfor": "已分析 {{total}} 个本地金融资源",
+      "writingRequirementLabel": "报告格式要求（可选）",
+      "writingRequirementPlaceholder": "指定报告格式偏好（例如：侧重估值分析、包含财务模型、强调增长动力）..."
+    }
+  },
+  "history": {
+    "title": "历史记录",
+    "description": "研究历史保存在浏览器本地，仅保存已完成的研究。",
+    "name": "标题",
+    "emptyTip": "没有历史记录",
+    "date": "日期",
+    "actions": "操作",
+    "import": "导入",
+    "importTip": "导入研究",
+    "importSuccess": "{{title}} 导入成功。",
+    "importFailed": "{{title}} 导入失败。",
+    "load": "加载",
+    "export": "导出",
+    "delete": "删除",
+    "loadMore": "加载更多历史",
+    "close": "关闭",
+    "noHistory": "没有历史记录"
+  },
+  "knowledge": {
+    "title": "本地知识库",
+    "description": "存储在浏览器本地的知识库。",
+    "create": "创建",
+    "createTip": "创建新知识",
+    "emptyTip": "没有内容",
+    "name": "标题",
+    "size": "大小",
+    "date": "日期",
+    "action": "操作",
+    "add": "添加",
+    "edit": "编辑",
+    "delete": "删除",
+    "loadMore": "加载更多知识",
+    "resource": "资源",
+    "fileInfor": "由用户于 {{createdAt}} 上传。",
+    "urlInfor": "由用户于 {{createdAt}} 获取。",
+    "createInfor": "由用户于 {{createdAt}} 创建。",
+    "webCrawler": "网页爬取器",
+    "webCrawlerTip": "网页爬取器通过服务器获取指定 URL 的页面内容, 并以 Markdown 格式返回数据。",
+    "urlPlaceholder": "请输入网址...",
+    "urlError": "请输入有效的 URL",
+    "localCrawler": "本地爬取器",
+    "clear": "清除",
+    "fetch": "获取",
+    "localResourceTitle": "1.2 本地研究资源 (可选)",
+    "addResource": "添加资源",
+    "addResourceMessage": "{{title}} 已添加到资源。",
+    "resourceNotFound": "未找到资源",
+    "knowledge": "知识",
+    "localFile": "本地文件",
+    "webPage": "网页",
+    "editor": {
+      "title": "标题",
+      "titlePlaceholder": "请输入标题...",
+      "content": "内容 (Markdown)",
+      "back": "返回",
+      "reset": "重置",
+      "submit": "提交"
+    }
+  },
+  "artifact": {
+    "AIWrite": "AI 写作",
+    "writingPromptTip": "请输入写作需求...",
+    "readingLevel": "阅读水平",
+    "PhD": "博士",
+    "college": "大学生",
+    "teenager": "青少年",
+    "child": "儿童",
+    "pirate": "海盗",
+    "adjustLength": "调整长度",
+    "longest": "更长",
+    "long": "长",
+    "shorter": "短",
+    "shortest": "更短",
+    "translate": "翻译",
+    "continuation": "续写",
+    "addEmojis": "添加表情",
+    "send": "发送"
+  },
+  "knowledgeGraph": {
+    "action": "生成知识图谱",
+    "regenerate": "重新生成",
+    "edit": "编辑",
+    "view": "查看"
+  },
+  "editor": {
+    "copy": "复制",
+    "mermaid": {
+      "downloadSvg": "下载为图片",
+      "copyText": "复制文本",
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "resize": "重置大小"
+    },
+    "tooltip": {
+      "bold": "粗体",
+      "italic": "斜体",
+      "strikethrough": "删除线",
+      "code": "代码",
+      "math": "数学公式",
+      "link": "链接",
+      "quote": "引用"
+    },
+    "slash": {
+      "heading": {
+        "name": "标题",
+        "description": "插入标题"
+      },
+      "h1": {
+        "name": "一级标题",
+        "description": "插入一级标题"
+      },
+      "h2": {
+        "name": "二级标题",
+        "description": "插入二级标题"
+      },
+      "h3": {
+        "name": "三级标题",
+        "description": "插入三级标题"
+      },
+      "h4": {
+        "name": "四级标题",
+        "description": "插入四级标题"
+      },
+      "h5": {
+        "name": "五级标题",
+        "description": "插入五级标题"
+      },
+      "h6": {
+        "name": "六级标题",
+        "description": "插入六级标题"
+      },
+      "list": {
+        "name": "列表",
+        "description": "插入列表"
+      },
+      "ul": {
+        "name": "无序列表",
+        "description": "插入无序列表项"
+      },
+      "ol": {
+        "name": "有序列表",
+        "description": "插入有序列表项"
+      },
+      "todo": {
+        "name": "待办事项",
+        "description": "插入待办事项"
+      },
+      "advanced": {
+        "name": "高级",
+        "description": "高级命令"
+      },
+      "link": {
+        "name": "链接",
+        "description": "插入链接"
+      },
+      "image": {
+        "name": "图片",
+        "description": "插入图片"
+      },
+      "code": {
+        "name": "代码块",
+        "description": "插入代码块"
+      },
+      "math": {
+        "name": "数学公式",
+        "description": "插入数学公式"
+      },
+      "table": {
+        "name": "表格",
+        "description": "插入一个 3x3 表格"
+      },
+      "quote": {
+        "name": "引用",
+        "description": "插入引用"
+      },
+      "horizontal": {
+        "name": "水平线",
+        "description": "插入水平线"
+      }
+    },
+    "placeholder": "请输入文本，或输入 \"/ \" 使用指令"
+  },
+  "setting": {
+    "title": "设置",
+    "description": "所有设置都将保存在您的浏览器中。",
+    "model": "语言模型",
+    "general": "系统设置",
+    "provider": "AI 服务",
+    "providerTip": "AI 服务提供商。对于 One API 和 New API 这类 AI 聚合服务，请选择 `兼容 OpenAI`。",
+    "openAICompatible": "OpenAI 兼容",
+    "free": "免费",
+    "mode": "API 模式",
+    "modeTip": "本地模式下，所有请求都直接由浏览器发送。代理模式下，所有请求会通过服务器（代理）转发。",
+    "local": "本地",
+    "proxy": "代理",
+    "apiKeyLabel": "API 密钥",
+    "apiKeyPlaceholder": "请输入模型 API 密钥",
+    "apiUrlLabel": "API 基础 URL",
+    "apiUrlPlaceholder": "请输入 API 基础 URL",
+    "resourceNameLabel": "资源名称",
+    "resourceNamePlaceholder": "请输入资源名称",
+    "apiVersionLabel": "API 版本",
+    "apiVersionPlaceholder": "请输入 API 版本",
+    "accessPassword": "访问密码",
+    "accessPasswordPlaceholder": "请输入服务器访问密码",
+    "accessPasswordTip": "服务端 API 鉴权，避免 API 被外部应用盗用。",
+    "thinkingModel": "思维模型",
+    "thinkingModelTip": "深度研究使用的核心模型，建议选择擅长思考的模型。",
+    "networkingModel": "任务模型",
+    "networkingModelTip": "负责辅助任务的模型，建议选择输出效率高的模型。",
+    "recommendedModels": "推荐模型",
+    "basicModels": "基础模型",
+    "modelListLoadingPlaceholder": "请选择模型",
+    "modelListPlaceholder": "请输入模型名称",
+    "refresh": "点击刷新模型",
+    "modelListLoading": "模型列表加载中",
+    "search": "搜索参数",
+    "webSearch": "联网搜索",
+    "webSearchTip": "开启联网搜索功能可以获取最新数据，有利于减少大语言模型的“幻觉”。强烈推荐启用。",
+    "enable": "启用",
+    "disable": "禁用",
+    "searchProvider": "搜索服务",
+    "searchProviderTip": "搜索服务提供商。部分模型内置了联网搜索能力，但大多数模型需要借助第三方搜索引擎才能实现联网查询。",
+    "modelBuiltin": "模型内置",
+    "bocha": "博查",
+    "parallelSearch": "并行搜索",
+    "parallelSearchTip": "并行搜索能加快数据信息收集，但过高的并发率可能触发模型的每分钟请求次数限制。",
+    "searchResults": "搜索数量",
+    "searchResultsTip": "最大搜索数量。部分搜索引擎并不支持此参数。",
+    "searchApiKeyPlaceholder": "请输入您的 API 密钥",
+    "searchScope": "搜索范围",
+    "all": "全部",
+    "academic": "学术",
+    "language": "界面语言",
+    "languageTip": "系统会根据用户浏览器语言自动选择界面语言。同时，也会影响 AI 模型的响应语言。",
+    "system": "跟随系统",
+    "light": "明亮",
+    "dark": "黑暗",
+    "debug": "调试模式",
+    "debugTip": "系统调试可以帮助用户捕捉请求异常，定位未知错误。通常情况下无需开启。",
+    "PWA": "安装PWA",
+    "PWATip": "渐进式 Web 应用是一个使用 web 平台技术构建的应用程序，它提供与原生应用程序相近的用户体验。",
+    "installlPWA": "安装浏览器应用(PWA)",
+    "resetSetting": "重置设置",
+    "resetAllSettings": "重置设置并清空缓存",
+    "resetSettingWarning": "此操作将清空所有数据并初始化项目",
+    "version": "当前版本",
+    "checkForUpdate": "检查更新",
+    "experimental": "🧪 实验性",
+    "references": "参考文献",
+    "referencesTip": "启用参考文献，将通过 prompt 给搜索结果和最终报告中加入引用链接。对于一些小模型，效果可能不佳。",
+    "citationImage": "引用图片",
+    "citationImageTip": "启用引用图片，会通过 prompt 尝试在最终报告中添加与内容相关的图片。",
+    "save": "保存",
+    "confirm": "确认",
+    "cancel": "取消"
+  }
+}
