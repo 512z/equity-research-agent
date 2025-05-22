@@ -33,7 +33,7 @@ import useDeepResearch from "@/hooks/useDeepResearch";
 import useAiProvider from "@/hooks/useAiProvider";
 import useKnowledge from "@/hooks/useKnowledge";
 import useAccurateTimer from "@/hooks/useAccurateTimer";
-import { useGlobalStore, SectionType } from "@/store/global";
+import { useGlobalStore } from "@/store/global";
 import { useSettingStore } from "@/store/setting";
 import { useTaskStore } from "@/store/task";
 import { useHistoryStore } from "@/store/history";
@@ -128,7 +128,7 @@ function Topic() {
   }, [taskStore.question, form]);
 
   return (
-    <section className="p-4 border rounded-md mt-4 print:hidden">
+    <section className="p-4 rounded-md mt-4 print:hidden dark:border-0 border">
       <div className="flex justify-between items-center border-b mb-2">
         <h3 className="font-semibold text-lg leading-10">
           {t("research.topic.title")}
@@ -208,7 +208,7 @@ function Topic() {
               </div>
             </FormControl>
           </FormItem>
-          <Button className="w-full mt-4" disabled={isThinking} type="submit">
+          <Button className="w-full mt-4 dark:bg-white dark:text-black dark:hover:bg-gray-200" disabled={isThinking} type="submit">
             {isThinking ? (
               <>
                 <LoaderCircle className="animate-spin" />

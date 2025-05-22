@@ -29,6 +29,17 @@ Equity Research Agent is a powerful AI-driven tool designed to help investors an
 - **Professional Report Generation**: Create complete research reports with executive summaries, investment ratings, and target prices
 - **Interactive Report Editing**: Regenerate or fine-tune specific sections of reports as needed
 
+## 🎯 Roadmap
+
+- [x] Professional equity research report structure
+- [x] Macroeconomic, industry, and company analysis framework
+- [x] Financial data extraction and processing
+- [x] Investment recommendation system
+- [ ] Integration with financial data APIs (Yahoo Finance, Alpha Vantage, etc.)
+- [ ] Financial chart generation and visualization
+- [ ] Portfolio analysis and comparison tools
+- [ ] Real-time market data updates
+
 ## 🚀 Recommended Configuration
 
 For the best experience, we recommend the following configuration:

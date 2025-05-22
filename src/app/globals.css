@@ -82,8 +82,8 @@
 
     --popover-foreground: 210 40% 98%;
 
-    /* Cyan primary color for tech feel */
-    --primary: 180 100% 60%;
+    /* White primary color */
+    --primary: 0 0% 100%;
 
     --primary-foreground: 222.2 47.4% 11.2%;
 
@@ -96,8 +96,8 @@
 
     --muted-foreground: 215 20.2% 65.1%;
 
-    /* Purple accent for tech contrast */
-    --accent: 280 100% 70%;
+    /* White accent */
+    --accent: 0 0% 100%;
 
     --accent-foreground: 210 40% 98%;
 
@@ -111,11 +111,11 @@
 
     --input: 217.2 32.6% 17.5%;
 
-    /* Cyan ring for focus states */
-    --ring: 180 100% 60%;
+    /* White ring for focus states */
+    --ring: 0 0% 100%;
 
     /* Vibrant chart colors */
-    --chart-1: 180 100% 60%;
+    --chart-1: 0 0% 100%;
 
     --chart-2: 280 100% 70%;
 
@@ -152,31 +152,63 @@
     z-index: -1;
   }
   
+  /* 移除暗色主题下所有边框 */
+  .dark section,
+  .dark .card,
+  .dark .border,
+  .dark h3.border-b,
+  .dark div.border-b,
+  .dark .border-b {
+    border: 0 !important;
+  }
+  
   /* Glow effect for primary elements */
   .dark .btn-primary,
   .dark button[type="submit"],
-  .dark .primary-glow {
-    box-shadow: 0 0 15px hsla(180, 100%, 60%, 0.5);
+  .dark .primary-glow,
+  .dark button:not(.tech-icon-button):not(.h-8) {
+    box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.5);
     transition: all 0.2s ease;
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  /* 顶部图标样式 */
+  .dark header button.h-8,
+  .dark button.tech-icon-button {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .dark header button.h-8 svg,
+  .dark button.tech-icon-button svg {
+    color: white !important;
   }
   
   .dark .btn-primary:hover,
   .dark button[type="submit"]:hover,
-  .dark .primary-glow:hover {
-    box-shadow: 0 0 25px hsla(180, 100%, 60%, 0.7);
+  .dark .primary-glow:hover,
+  .dark button:not(.tech-icon-button):not(.h-8):hover {
+    box-shadow: 0 0 25px hsla(0, 0%, 100%, 0.7);
+    background-color: #f0f0f0 !important;
+  }
+  
+  .dark header button.h-8:hover,
+  .dark button.tech-icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
   }
   
   /* Tech-style card effect */
   .dark .card {
     backdrop-filter: blur(10px);
-    border: 1px solid hsla(220, 70%, 30%, 0.5);
+    border: 0;
     transition: all 0.3s ease;
   }
   
   .dark .card:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-color: hsla(180, 100%, 60%, 0.5);
+    border-color: hsla(0, 0%, 100%, 0.5);
   }
   
   /* Tech-style title effect */
@@ -186,7 +218,7 @@
   }
   
   .dark .tech-title span {
-    text-shadow: 0 0 10px hsla(180, 100%, 60%, 0.5);
+    text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.5);
   }
   
   /* Tech-style icon buttons */
@@ -197,7 +229,7 @@
   }
   
   .dark .tech-icon-button:hover {
-    color: hsl(180, 100%, 60%);
+    color: hsl(0, 0%, 100%);
     transform: translateY(-2px);
   }
   
@@ -208,7 +240,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, hsla(180, 100%, 60%, 0), hsla(180, 100%, 60%, 0.8), hsla(180, 100%, 60%, 0), transparent);
+    background: linear-gradient(90deg, transparent, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0), transparent);
     transform: translateX(-100%);
     transition: transform 0.5s ease;
   }

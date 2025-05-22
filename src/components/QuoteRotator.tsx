@@ -116,7 +116,7 @@ export default function QuoteRotator() {
     <div className="mt-16 mb-10 text-center">
       <div className={`transition-opacity duration-500 ${fadeState === 'fade-out' ? 'opacity-0' : 'opacity-100'}`}>
         <p className="italic text-black dark:text-white text-lg">
-          "{currentQuote.quote}"
+          &ldquo;{currentQuote.quote}&rdquo;
         </p>
         <p className="text-black dark:text-white text-sm mt-1">
           — {currentQuote.author}

@@ -35,7 +35,7 @@ import useDeepResearch from "@/hooks/useDeepResearch";
 import useKnowledge from "@/hooks/useKnowledge";
 import { useTaskStore } from "@/store/task";
 import { useKnowledgeStore } from "@/store/knowledge";
-import { useGlobalStore, SectionType } from "@/store/global";
+import { useGlobalStore } from "@/store/global";
 import { getSystemPrompt } from "@/utils/deep-research/prompts";
 import { downloadFile } from "@/utils/file";
 

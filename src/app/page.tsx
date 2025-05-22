@@ -1,11 +1,11 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "../../node_modules/react-i18next";
 import { useTheme } from "next-themes";
 import { useGlobalStore, SectionType } from "@/store/global";
 import { useSettingStore } from "@/store/setting";
-import { ChevronLeft, ChevronRight, Zap, ZapOff } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import QuoteRotator from "@/components/QuoteRotator";
 
 const Header = dynamic(() => import("@/components/Internal/Header"));
@@ -30,9 +30,6 @@ function Home() {
     setOpenKnowledge,
     currentSection,
     setCurrentSection,
-    autoNavigate,
-    setAutoNavigate,
-    completionStatus,
   } = useGlobalStore();
 
   const { theme } = useSettingStore();
@@ -124,7 +121,7 @@ function Home() {
       
       {/* 进度指示器 - 使用黑色 */}
       <div className="flex justify-center space-x-2 my-4 print:hidden">
-        {sectionOrder.map((section, index) => (
+        {sectionOrder.map((section) => (
           <button
             key={section}
             onClick={() => !animating && setCurrentSection(section)}

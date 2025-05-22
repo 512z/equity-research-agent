@@ -18,7 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import useDeepResearch from "@/hooks/useDeepResearch";
 import useAccurateTimer from "@/hooks/useAccurateTimer";
 import { useTaskStore } from "@/store/task";
-import { useGlobalStore, SectionType } from "@/store/global";
+import { useGlobalStore } from "@/store/global";
 
 const MagicDown = dynamic(() => import("@/components/MagicDown"));
 
