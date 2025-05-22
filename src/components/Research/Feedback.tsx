@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
-import { useTranslation } from "../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

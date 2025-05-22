@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useLayoutEffect, useState } from "react";
-import { useTranslation } from "../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import { useGlobalStore, SectionType } from "@/store/global";
 import { useSettingStore } from "@/store/setting";

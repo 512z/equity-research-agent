@@ -1,6 +1,6 @@
 "use client";
 import { useMemo } from "react";
-import { useTranslation } from "../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";

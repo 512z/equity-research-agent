@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { Settings, History, BookText } from "lucide-react";
 import { Button } from "@/components/Internal/Button";
 import { useGlobalStore } from "@/store/global";

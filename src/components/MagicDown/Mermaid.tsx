@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState, type ReactNode } from "react";
-import { useTranslation } from "../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import copy from "copy-to-clipboard";
 import { customAlphabet } from "nanoid";

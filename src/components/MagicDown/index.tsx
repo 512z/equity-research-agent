@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useState, useRef, memo, type ReactNode } from "react";
-import { useTranslation } from "../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import copy from "copy-to-clipboard";
 import { FilePenLine, Save, Copy, CopyCheck } from "lucide-react";
 import FloatingMenu from "@/components/Internal/FloatingMenu";

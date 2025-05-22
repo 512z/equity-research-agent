@@ -6,7 +6,7 @@ import {
   useMemo,
   type ReactNode,
 } from "react";
-import { useTranslation } from "../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { usePWAInstall } from "react-use-pwa-install";
 import { RefreshCw, CircleHelp, MonitorDown } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -1,6 +1,6 @@
 "use client";
 import { useLayoutEffect } from "react";
-import { I18nextProvider } from "../../../node_modules/react-i18next";
+import { I18nextProvider } from "react-i18next";
 import { useSettingStore } from "@/store/setting";
 import i18n, { detectLanguage } from "@/utils/i18n";
 

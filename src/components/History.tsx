@@ -1,6 +1,6 @@
 "use client";
 import { useState, useMemo, useLayoutEffect, useRef } from "react";
-import { useTranslation } from "../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { TrashIcon, FileOutput, Download } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";

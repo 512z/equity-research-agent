@@ -1,7 +1,7 @@
 import i18next from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 import LanguageDetector from "i18next-browser-languagedetector/cjs";
-import { initReactI18next } from "../../node_modules/react-i18next";
+import { initReactI18next } from "react-i18next";
 import locales from "@/constants/locales";
 import { keys } from "radash";
 

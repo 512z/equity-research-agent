@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useLayoutEffect, useCallback, useState } from "react";
-import { useTranslation } from "../../../../node_modules/react-i18next";
+import { useTranslation } from "react-i18next";
 import { streamText } from "ai";
 import { toast } from "sonner";
 import { LoaderCircle } from "lucide-react";
