@@ -16,7 +16,6 @@ interface FearGreedData {
 export default function FearGreedIndex() {
   const [data, setData] = useState<FearGreedData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,10 +24,8 @@ export default function FearGreedIndex() {
         if (!response.ok) throw new Error('Failed to fetch');
         const result = await response.json();
         setData(result);
-        setError(false);
       } catch (err) {
         console.error('Error fetching Fear & Greed data:', err);
-        setError(true);
         // 设置默认数据（基于您图片中显示的数据）
         setData({
           current: 22,
@@ -60,17 +57,6 @@ export default function FearGreedIndex() {
 
   // 计算指针角度 (0-100 映射到 -90 到 90 度)
   const angle = (data.current / 100) * 180 - 90;
-
-  // 根据数值确定颜色
-  const getColor = (value: number) => {
-    if (value <= 25) return '#ef4444'; // 红色 - Extreme Fear
-    if (value <= 45) return '#f97316'; // 橙色 - Fear  
-    if (value <= 55) return '#6b7280'; // 灰色 - Neutral
-    if (value <= 75) return '#22c55e'; // 绿色 - Greed
-    return '#16a34a'; // 深绿色 - Extreme Greed
-  };
-
-  const currentColor = getColor(data.current);
 
   return (
     <div className="mt-4 mb-3 text-center">
