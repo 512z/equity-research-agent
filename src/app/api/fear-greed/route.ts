@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
-export const runtime = 'edge';
+// 移除 edge runtime，使用 Node.js runtime 以获得更好的网络请求支持
+// export const runtime = 'edge';
 
 interface FearGreedData {
   current: number;
@@ -32,18 +33,23 @@ const getRandomUserAgent = () => USER_AGENTS[Math.floor(Math.random() * USER_AGE
 
 export async function GET() {
   try {
+    console.log('Fetching Fear & Greed data from CNN API...');
+    
     // 使用Python包源码中的正确URL和方法
     const response = await fetch('https://production.dataviz.cnn.io/index/fearandgreed/graphdata', {
       headers: {
         'User-Agent': getRandomUserAgent(),
       },
+      // 增加超时时间
+      signal: AbortSignal.timeout(10000),
     });
 
     if (!response.ok) {
-      throw new Error('Failed to fetch CNN API data');
+      throw new Error(`CNN API responded with status: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log('Successfully fetched data from CNN API');
     
     // 根据Python包源码解析数据结构
     const fearGreedResponse = data.fear_and_greed;
@@ -85,19 +91,13 @@ export async function GET() {
   } catch (error) {
     console.error('Error fetching Fear & Greed Index:', error);
     
-    // 返回默认数据作为降级方案（基于您图片中显示的实际数据）
-    const fallbackData: FearGreedData = {
-      current: 22,
-      status: 'Extreme Fear',
-      history: {
-        previousClose: 22,
-        oneWeekAgo: 1,
-        oneMonthAgo: 26,
-        oneYearAgo: 58,
-      },
-      lastUpdate: new Date().toISOString(),
-    };
-    
-    return NextResponse.json(fallbackData);
+    // 不返回默认数据，直接返回错误状态，避免误导用户
+    return NextResponse.json(
+      { 
+        error: 'Failed to fetch Fear & Greed Index data',
+        message: 'Unable to connect to CNN API' 
+      }, 
+      { status: 500 }
+    );
   }
 } 

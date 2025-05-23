@@ -16,6 +16,7 @@ interface FearGreedData {
 export default function FearGreedIndex() {
   const [data, setData] = useState<FearGreedData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,21 +24,19 @@ export default function FearGreedIndex() {
         const response = await fetch('/api/fear-greed');
         if (!response.ok) throw new Error('Failed to fetch');
         const result = await response.json();
+        
+        // 检查是否是错误响应
+        if (result.error) {
+          throw new Error(result.message || 'API returned error');
+        }
+        
         setData(result);
+        setError(false);
       } catch (err) {
         console.error('Error fetching Fear & Greed data:', err);
-        // 设置默认数据（基于您图片中显示的数据）
-        setData({
-          current: 22,
-          status: 'Extreme Fear',
-          history: {
-            previousClose: 22,
-            oneWeekAgo: 1,
-            oneMonthAgo: 26,
-            oneYearAgo: 58,
-          },
-          lastUpdate: new Date().toISOString(),
-        });
+        // 不设置任何默认数据，避免误导用户
+        setError(true);
+        setData(null);
       } finally {
         setLoading(false);
       }
@@ -49,11 +48,10 @@ export default function FearGreedIndex() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) {
+  // 如果加载中、出错或没有数据，都不显示组件
+  if (loading || error || !data) {
     return null;
   }
-
-  if (!data) return null;
 
   // 计算指针角度 (0-100 映射到 -90 到 90 度)
   const angle = (data.current / 100) * 180 - 90;
