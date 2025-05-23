@@ -7,6 +7,7 @@ import { useGlobalStore, SectionType } from "@/store/global";
 import { useSettingStore } from "@/store/setting";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import QuoteRotator from "@/components/QuoteRotator";
+import FearGreedIndex from "@/components/FearGreedIndex";
 
 const Header = dynamic(() => import("@/components/Internal/Header"));
 const Setting = dynamic(() => import("@/components/Setting"));
@@ -86,6 +87,9 @@ function Home() {
       
       {/* 投资名言区域 */}
       <QuoteRotator />
+      
+      {/* Fear & Greed Index */}
+      <FearGreedIndex />
       
       {/* 只保留导航按钮 */}
       <div className="flex justify-end items-center my-4 print:hidden">
